@@ -75,12 +75,22 @@ label{
 }
 
 
-#opciones2,#opciones3,#opciones4{
+#opciones2,#opciones3{
     width: 30%;
   font-size: 20px;
     position: absolute;
     left: 18%;
     top: 320px;
+  font-family: 'Lato', sans-serif;
+   display: none;
+}
+
+#opciones4{
+	 width: 30%;
+  font-size: 20px;
+    position: absolute;
+    left: 18%;
+    top: 265px;
   font-family: 'Lato', sans-serif;
    display: none;
 }
