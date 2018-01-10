@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Rompecabezas</title>
+	<link rel="stylesheet" href="estilos.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body>
+  
+   <header id="rectangulo">
+     <p id="titulo">Elementos de determinación de la condición refugiado</p>
+   </header>
+   <div class="contenedor">
+   
+     <a href="javascript:history.back(-1);"><img id="cerrar2" src="img/cerrarActividad.png" alt="cerrar"></a>
+     
+   <div id="contenedorInstrucciones">
+
+   <p id="instruccion">Lea con atención cada uno de los enunciados y seleccione la opción que considere correcta. Por cada respuesta correcta, irá descubriendo la imagen del rompecabezas.</p>
+   </div>
+   
+   
+   <div id="preguntasTablero">
+    <!-------------------------preguntas----------------------> 
+   <img id="pregunta" src="img/pregunta1.png" alt="preguntas">
+   
+   <!-------------------------preguntas---------------------->
+   
+   
+   <img id="tablero" src="img/sinPiezas.png" alt="tablero"> 
+    </div>
+    
+    
+   <!-- ----------botones pregunta 1-------------->
+    <form id="opciones">
+		<label for="v">
+    <input type="radio" id="v" name="opcion" value="verdadero">Esta debe resolverse a favor del solicitante.
+    </label>
+    
+    <label for="f" id="no">
+    <input type="radio" id="f" name="opcion" value="Falso">Esta debe resolverse procurando la exclusion del caso.
+    </label>
+	</form>
+  <!-- ----------botones pregunta 1-------------->
+  
+  <!-- ----------botones pregunta 2-------------->
+  <form id="opciones2">
+		<label for="v2">
+    <input type="radio" id="v2" name="opcion2" value="verdadero2">El contexto en el cual se presenta el caso concreto, las diferencias culturales y de otro tipo, los límites de tiempo en la entrevista.
+    </label>
+    
+    <label for="f2">
+    <input type="radio" id="f2" name="opcion2" value="Falso2">La consistencia y coherencia que presenta el caso en un contexto específico.
+    </label>
+	</form>
+  <!-- ----------botones pregunta 2-------------->
+  
+    <!-- ----------botones pregunta 3-------------->
+  <form id="opciones3">
+		<label for="v3">
+    <input type="radio" id="v3" name="opcion3" value="verdadero3">Se debe tener en cuenta cómo incide el riesgo en el temor fundado de persecución que alega.
+    </label>
+    
+    <label for="f3">
+    <input type="radio" id="f3" name="opcion3" value="Falso3">Solo se debe estudiar el riesgo con respecto a los actores estatales.
+    </label>
+	</form>
+  <!-- ----------botones pregunta 3-------------->
+  
+    <!-- ----------botones pregunta 4-------------->
+  <form id="opciones4">
+		<label for="v4">
+    <input type="radio" id="v4" name="opcion4" value="verdadero4">Debe realizarse con las mismas formalidades procesales establecidas en los códigos judiciales del país respectivo.
+    </label>
+    
+    <label for="f4">
+    <input type="radio" id="f4" name="opcion4" value="Falso4">Debe ser flexible para poder responder a la dificultad probatoria y al mismo tiempo garantizar el debido proceso.
+    </label>
+	</form>
+  <!-- ----------botones pregunta 4-------------->
+  
+ <!------------------------ boton siguiente-------------------------->
+ <img id="siguiente1" src="img/siguiente.png" alt="siguiente">
+ <img id="siguiente2" src="img/siguiente.png" alt="siguiente">
+ <img id="siguiente3" src="img/siguiente.png" alt="siguiente">
+ <img id="siguiente4" src="img/siguiente.png" alt="siguiente">
+ 
+ <div id="contenedorFelicitaciones">
+     
+     
+     <a href="javascript:history.back(-1);"><img id="cerrar" src="img/cerrarActividad.png" alt="cerrar"></a>
+     <img id="ganar" src="img/felicitacionesRompecabeza.png" alt="ganar">
+ 
+ </div>
+ 
+ 
+ <!------------------------ boton siguiente-------------------------->
+  
+  <p id="incorrecto">Incorrecto. Por favor intente de nuevo</p>
+  </div>
+	<script src="jquery-3.2.1.min.js"></script>
+	
+	<script>
+  $(document).ready(function(){
+    
+  //Cuando es Verdadera
+  /*--------------------1 pregunta--------------------------------*/  
+  $('#v').click(function(){
+		 $('#incorrecto').css({
+			 "display" : "none"
+		 });
+		$('#tablero').attr('src','img/unaPieza.png');
+		$('#siguiente1').css({
+			 "display" : "block"
+		 });
+		});
+	
+	$('#f').click(function(){
+     
+			$('#incorrecto').css({
+			 "display" : "block"
+		 });
+			$('#siguiente1').css({
+			 "display" : "none"
+		 });
+    $('#tablero').attr('src','img/sinPiezas.png');
+	});
+	
+	$('#siguiente1').click(function(){
+		$('#pregunta').attr('src','img/pregunta2.png');
+		$('#siguiente1').css({
+			 "display" : "none"
+		 });
+		 $('#opciones').css({
+			 "display" : "none"
+		 });
+		$('#opciones2').css({
+			 "display" : "inline-grid"
+		 });
+	
+	});
+  /*--------------------1 pregunta--------------------------------*/
+  
+    
+  /*--------------------2 pregunta--------------------------------*/
+    $('#v2').click(function(){
+		 $('#incorrecto').css({
+			 "display" : "none"
+		 });
+		$('#tablero').attr('src','img/dosPiezas.png');
+		$('#siguiente2').css({
+			 "display" : "block"
+		 });
+		});
+	
+	$('#f2').click(function(){
+		 $('#incorrecto').css({
+			 "display" : "none"
+		 });
+		$('#tablero').attr('src','img/dosPiezas.png');
+		$('#siguiente2').css({
+			 "display" : "block"
+		 });
+        
+	});
+	
+	$('#siguiente2').click(function(){
+		$('#pregunta').attr('src','img/pregunta3.png');
+		$('#siguiente2').css({
+			 "display" : "none"
+		 });
+		 $('#opciones2').css({
+			 "display" : "none"
+		 });
+		$('#opciones3').css({
+			 "display" : "inline-grid"
+		 });
+	
+	});
+  /*--------------------2 pregunta--------------------------------*/
+  
+  /*--------------------3 pregunta--------------------------------*/
+  $('#v3').click(function(){
+		 $('#incorrecto').css({
+			 "display" : "none"
+		 });
+		$('#tablero').attr('src','img/tresPiezas.png');
+		$('#siguiente3').css({
+			 "display" : "block"
+		 });
+		});
+	
+	$('#f3').click(function(){
+			$('#incorrecto').css({
+			 "display" : "block"
+		 });
+			$('#siguiente3').css({
+			 "display" : "none"
+		 });
+    $('#tablero').attr('src','img/dosPiezas.png');
+	});
+	
+	$('#siguiente3').click(function(){
+		$('#pregunta').attr('src','img/pregunta4.png');
+		$('#siguiente3').css({
+			 "display" : "none"
+		 });
+		 $('#opciones3').css({
+			 "display" : "none"
+		 });
+		$('#opciones4').css({
+			 "display" : "inline-grid"
+		 });
+	
+	});  
+  /*--------------------3 pregunta--------------------------------*/
+  
+  /*--------------------4 pregunta--------------------------------*/
+   $('#v4').click(function(){
+		 $('#incorrecto').css({
+			 "display" : "block"
+		 });
+		$('#tablero').attr('src','img/tresPiezas.png');
+		$('#siguiente3').css({
+			 "display" : "none"
+		 });
+		});
+	
+	$('#f4').click(function(){
+			$('#incorrecto').css({
+			 "display" : "none"
+		 });
+			$('#siguiente4').css({
+			 "display" : "block"
+		 });
+    $('#tablero').attr('src','img/cuatroPiezas.png');
+	});
+	
+	$('#siguiente4').click(function(){
+		$('#siguiente4').css({
+			 "display" : "none"
+		 });
+    
+     $('#contenedorFelicitaciones').css({
+			 "display" : "block"
+		 });
+	
+	});   
+  /*--------------------4 pregunta--------------------------------*/
+  });
+  
+  </script>
+  
+</body>
+</html>

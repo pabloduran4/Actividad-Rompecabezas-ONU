@@ -1,0 +1,280 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-image: url(img/bgContenedor.png);
+    width: 100%;
+}
+
+.contenedor{
+    width: 100%;
+}
+
+#rectangulo{
+	background-color: #4272B6;
+  text-align: center;
+  color: white;
+  height: 42px;
+    box-shadow: 0px 0px 15px black;
+    width: 100%;
+    padding-top: 10px;
+  
+}
+
+#contenedorInstrucciones{
+    display: block;
+    width: 40%;
+    margin-left: 15%;
+    margin-top: 50px;
+}
+
+#instruccion{
+    display: block;
+  text-align: left;
+  font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#titulo{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+}
+
+#preguntasTablero{
+    width: 70%;
+    margin: auto;
+}
+
+#pregunta{
+  width: 50%;
+  position: relative;
+}
+
+
+
+#tablero{
+    width: 30%;
+    margin-left: 5%;
+}
+
+#opciones{
+  display: inline-grid;
+    position: absolute;
+    left: 18%;
+    top: 320px;
+    font-size: 20px;
+  font-family: 'Lato', sans-serif;
+    width: 30%;
+}
+
+label{
+    margin-bottom: 20px;
+}
+
+
+#opciones2,#opciones3,#opciones4{
+    width: 30%;
+  font-size: 20px;
+    position: absolute;
+    left: 18%;
+    top: 320px;
+  font-family: 'Lato', sans-serif;
+   display: none;
+}
+
+#siguiente1,#siguiente2,#siguiente3,#siguiente4{
+      width: 10%;
+    position: absolute;
+    left: 37%;
+    top: 510px;
+  display: none;
+  cursor: pointer;
+    min-width: 110px;
+  
+}
+
+#incorrecto{
+ position: relative;
+top: -50px;
+margin-left: 17%;  
+ color: red;
+  display: none;
+   font-family: 'Lato';
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+#contenedorFelicitaciones{
+    display: none;
+    position: absolute;
+    z-index: 50;
+    left: 30%;
+    top: 300px;
+    width: 527px;
+}
+
+#ganar{
+   width: 95%;
+  z-index: 2;
+  display: block;
+    float: left;
+    clear: both;
+}
+
+#cerrar{
+   width: 5%;
+    position: relative;
+  z-index: 2;
+  display: block;
+    float: right;
+    clear: both;
+}
+
+#cerrar2{
+    width: 22px;
+    position: absolute;
+    top: 15px;
+    right: 5%;
+    z-index: 2;
+    display: block;
+}
+
+
+@media only screen and (max-width: 1670px) {
+    #instruccion{
+        font-size: 18px;
+    }
+    
+    #siguiente1,#siguiente2,#siguiente3,#siguiente4{
+        top: 480px;
+    }
+}
+
+@media only screen and (max-width: 1520px) {
+    #instruccion{
+        font-size: 18px;
+    }
+    
+    #siguiente1,#siguiente2,#siguiente3,#siguiente4{
+        top: 440px;
+    }
+    
+    #opciones,#opciones2,#opciones3,#opciones4{
+        font-size: 15px;
+        top: 260px;
+    }
+    
+    #incorrecto{
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 1320px) {
+    
+    #siguiente1,#siguiente2,#siguiente3,#siguiente4{
+        top: 420px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    #opciones,#opciones2,#opciones3,#opciones4{
+        top: 250px;
+    }
+    
+    #siguiente1,#siguiente2,#siguiente3,#siguiente4{
+        top: 410px;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    #preguntasTablero{
+        min-width: 805px;
+    }
+    
+    #contenedorInstrucciones{
+        min-width: 372px;
+        margin-left: 10%;
+    }
+    
+    #instruccion{
+        font-size: 14px;
+    }
+    
+    #siguiente1,#siguiente2,#siguiente3,#siguiente4{
+        top: 390px;
+    }
+    
+    #opciones,#opciones2,#opciones3,#opciones4{
+        font-size: 13px;
+        top: 250px;
+        left: 15%;
+        min-width: 315px;
+    }
+    
+    #incorrecto{
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 910px){
+    #contenedorInstrucciones{
+        margin-left: 40px;
+    }
+    
+    #incorrecto{
+        margin-left: 60px;
+    }
+    
+    #opciones,#opciones2,#opciones3,#opciones4{
+        left: 70px;
+    }
+}
+
+@media only screen and (max-width: 810px){
+    
+    #opciones,#opciones2,#opciones3,#opciones4{
+        left: 30px;
+    }
+}
+
+
+/*1columna*/
+@media only screen and (max-width: 810px){
+    #contenedorInstrucciones{
+        margin-left: 0px;
+    }
+    
+    
+    #preguntasTablero{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #cerrar2{
+        top: 70px;
+    }
+    
+    #contenedorFelicitaciones{
+        left: 0;
+        top: 250px;
+        width: 500px;
+    }
+    
+    #tablero{
+        margin-top: 30px;
+    }
+    
+    #opciones,#opciones2,#opciones3,#opciones4{
+        top: 250px;
+    }
+    
+    #incorrecto{
+        top: -300px;
+        left: 0px;
+    }
+    
+    
+}
